@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: nginx
+  labels:
+    project: expense
+    environment: dev
+spec:
+  replicas: 2
+  selectors: 
+    matchLabels:
+      name: nginx
+      project: expense
+  template:
+    metadata:
+      labels:
+        name: nginx
+        project: expense
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:v1.0
+---
+  
