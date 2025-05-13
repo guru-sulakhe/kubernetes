@@ -18,5 +18,5 @@ spec:
         project: expense
     spec:
       containers:
-      - name: 
-        image: nodejs:v1.0
+      - name: nodejs
+        image: nodejs:v1.2
