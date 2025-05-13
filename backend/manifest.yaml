@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: nodejs
   labels:
     project: expense
     environment: dev
@@ -9,14 +9,14 @@ spec:
   replicas: 2
   selectors: 
     matchLabels:
-      name: nginx
+      name: nodejs
       project: expense
   template:
     metadata:
       labels:
-        name: nginx
+        name: nodejs
         project: expense
     spec:
       containers:
-      - name: nginx
-        image: nginx:v1.0
+      - name: nodejs
+        image: nodejs:v1.2
